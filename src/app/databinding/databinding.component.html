@@ -1,0 +1,58 @@
+<section>
+
+<div class="container">
+    <div class="row pt-5">
+        <h1 class="display-5 text-center">{{dtBinding[0]}}</h1>
+    </div>
+
+    <div class="row pt-5">
+        <h1 class="display-5 text-center">{{dtBinding[1]}}</h1>
+        <img [src]="imgpath + mrulogo">
+    </div>
+
+    <div class="row pt-5">
+        <h1 class="display-5 text-center">{{dtBinding[2]}}</h1>
+        <div>
+            <button (click)="handleClick()" class="btn btn-danger">Click me</button>
+          </div>
+    </div>
+
+    <div class="row pt-5">
+        <h1 class="display-5 text-center">{{dtBinding[3]}}</h1>
+        <h3>Simple</h3>
+        <div>
+            <h1>Welcome, {{userName}}!</h1>
+            <input [(ngModel)]="userName" placeholder="Enter your name">
+          </div>  
+        <h3>Complex</h3>
+        <p>Here I am implimenting bit complex model</p>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h1>Enter your information:</h1>
+            <form (ngSubmit)="save()">
+                <div class="form-group">
+              <label>Name:</label>
+              <input [(ngModel)]="user.name" name="name" required class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Email:</label>
+              <input [(ngModel)]="user.email" name="email" type="email" required class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Phone:</label>
+              <input [(ngModel)]="user.phone" name="phone" type="tel" required class="form-control">
+          </div>
+
+          <div class="form-group">
+            
+              <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+            </form>
+          </div>
+          <div class="col-md-4"></div>
+          
+
+    </div>
+</div>
+
+</section>
