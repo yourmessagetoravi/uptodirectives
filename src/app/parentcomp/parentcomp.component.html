@@ -1,0 +1,46 @@
+<section>
+  <div class="container">
+    <div class="row parentview">
+     
+      <input
+        type="radio"
+        name="gender"
+        [(ngModel)]="filterValue"
+        (change)="applyFilter('all')"
+      />
+      All
+      <input
+        type="radio"
+        name="gender"
+        [(ngModel)]="filterValue"
+        (change)="applyFilter('male')"
+      />
+      Male
+      <input
+        type="radio"
+        name="gender"
+        [(ngModel)]="filterValue"
+        (change)="applyFilter('female')"
+      />
+      Female
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">idno</th>
+            <th scope="col">Name</th>
+            <th scope="col">Gender</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of filteredData">
+            <td>{{ student.idno }}</td>
+            <td>{{ student.sname }}</td>
+            <td>{{ student.gender }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <app-child (notify)="parentmethod($event)"></app-child>
+    </div>
+  </div>
+</section>

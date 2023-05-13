@@ -9,6 +9,8 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { CustomdirectivesComponent } from './customdirectives/customdirectives.component';
 import { FormsModule } from '@angular/forms';
+import { ParentcompComponent } from './parentcomp/parentcomp.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     DatabindingComponent,
     DirectivesComponent,
-    CustomdirectivesComponent
+    CustomdirectivesComponent,
+    ParentcompComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
